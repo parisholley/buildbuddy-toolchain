@@ -95,6 +95,7 @@ buildbuddy_toolchain = repository_rule(
 
 def buildbuddy(name, llvm = False, docker_image = "none"):
     buildbuddy_toolchain(name = name, llvm = llvm, docker_image = docker_image)
+    buildbuddy_cc_toolchain(name)
 
 def register_buildbuddy_toolchain(name, llvm = True, docker_image = "none"):
     http_archive(
